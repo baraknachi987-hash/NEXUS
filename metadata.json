@@ -1,0 +1,12 @@
+{
+  "name": "Nexora Enterprise",
+  "description": "Progressive Web Application (PWA) for modern enterprise team management, task tracking, real-time collaboration, and AI-powered productivity analytics.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

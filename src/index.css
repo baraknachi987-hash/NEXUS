@@ -1,0 +1,242 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom premium cards and layouts configured for Clean Utility / Minimal style */
+.glass-card {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(15, 23, 42, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Day Mode Override (Priscilla Clean Utility Day Theme) */
+.light {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+.light .glass-card {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light .glass-card:hover {
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Desktop & mobile sidebars */
+.light aside {
+  background-color: #0f172a !important;
+  border-color: #1e293b !important;
+}
+
+.light aside .text-white {
+  color: #ffffff !important;
+}
+
+/* Light headers */
+.light header {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* General clean typography maps */
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6, .light label {
+  color: #0f172a !important;
+}
+
+.light p, .light span:not(aside span) {
+  color: #475569;
+}
+
+.light .text-slate-100 {
+  color: #0f172a !important;
+}
+
+.light .text-slate-200 {
+  color: #1e293b !important;
+}
+
+.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+.light .text-slate-400 {
+  color: #64748b !important;
+}
+
+.light .text-slate-500 {
+  color: #64748b !important;
+}
+
+.light .text-white:not(button, button *) {
+  color: #0f172a !important;
+}
+
+/* Specific elements state overrides */
+.light aside * {
+  /* Keep all elements inside the side-drawer standard styling or white */
+}
+
+/* Input boxes & dropdown styles */
+.light input, .light textarea, .light select {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.light input::placeholder, .light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Custom background pills overriding */
+.light .bg-indigo-500\/10 {
+  background-color: #e0e7ff !important;
+  color: #4f46e5 !important;
+}
+
+.light .bg-emerald-500\/10 {
+  background-color: #ecfdf5 !important;
+  color: #047857 !important;
+}
+
+.light .bg-amber-500\/10 {
+  background-color: #fffbeb !important;
+  color: #b45309 !important;
+}
+
+.light .bg-rose-500\/10 {
+  background-color: #fff1f2 !important;
+  color: #be123c !important;
+}
+
+.light .bg-slate-900\/40, .light .bg-slate-950\/20, .light .bg-slate-900\/60, .light .bg-slate-950, .light .bg-slate-900 {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.light nav.lg\:hidden {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light nav.lg\:hidden button {
+  color: #64748b !important;
+}
+
+.light nav.lg\:hidden button.text-indigo-400 {
+  color: #4f46e5 !important;
+}
+
+.light canvas {
+  display: none !important;
+}
+
+/* Scrollbar customizations */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+.light .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.light .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Keyframe animations for absolute precision entrances */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Custom glow utility */
+.shadow-glow {
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+}
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
